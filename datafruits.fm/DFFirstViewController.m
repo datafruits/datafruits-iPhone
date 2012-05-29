@@ -7,17 +7,62 @@
 //
 
 #import "DFFirstViewController.h"
+#import "DFPlayPauseView.h"
 
-@interface DFFirstViewController ()
+#define RADIO_LOCATION @"http://radio.sub.fm:8529"
 
+@interface DFFirstViewController () <DFPlayPauseDataSource>
+@property (nonatomic, weak) IBOutlet DFPlayPauseView *playPauseView;
 @end
 
-@implementation DFFirstViewController
+@implementation  DFFirstViewController {
+	CFReadStreamRef stream;
+}
+
+@synthesize isPlaying = _isPlaying;
+@synthesize player = _player;
+@synthesize playPauseView = _playPauseView;
+
+- (bool)isPlayingForPlayPause:(DFPlayPauseView *)sender {
+	return self.isPlaying;
+}
+
+- (void)setPlayPauseView:(DFPlayPauseView *)playPauseView {
+	_playPauseView = playPauseView;
+	[self.playPauseView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(handlePlayPauseTap:)]];
+	self.playPauseView.dataSource = self;
+}
+
+- (void)handlePlayPauseTap:(UITapGestureRecognizer *)gesture {
+	[self changePlaying];
+	[self.playPauseView setNeedsDisplay];
+}
+
+- (void)changePlaying {
+	if (!self.isPlaying) {
+	 	[self.player play];
+		self.isPlaying = YES;
+	} else {
+		[self.player pause];
+		self.isPlaying = NO;
+	}
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Release any cached data, images, etc that aren't in use.
+}
+
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+	urlStream = [NSURL URLWithString:RADIO_LOCATION];   
+	self.player = [AVPlayer playerWithURL:urlStream];
+
 }
 
 - (void)viewDidUnload

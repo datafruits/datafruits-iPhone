@@ -17,9 +17,14 @@
 		24731A8C15706AC600A97D01 /* DFFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731A8B15706AC600A97D01 /* DFFirstViewController.m */; };
 		24731A8E15706AC600A97D01 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731A8D15706AC600A97D01 /* first.png */; };
 		24731A9015706AC600A97D01 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731A8F15706AC600A97D01 /* first@2x.png */; };
-		24731A9315706AC600A97D01 /* DFSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731A9215706AC600A97D01 /* DFSecondViewController.m */; };
-		24731A9515706AC600A97D01 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731A9415706AC600A97D01 /* second.png */; };
-		24731A9715706AC600A97D01 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731A9615706AC600A97D01 /* second@2x.png */; };
+		24731AB21570A8C800A97D01 /* applicationIconSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731AB11570A8C800A97D01 /* applicationIconSmall.png */; };
+		24731AB41570A8CE00A97D01 /* applicationIconLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731AB31570A8CE00A97D01 /* applicationIconLarge.png */; };
+		24731AB71572BA8F00A97D01 /* DFPlayPauseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731AB61572BA8F00A97D01 /* DFPlayPauseView.m */; };
+		249D1B9B1574A83000C4A97D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249D1B9A1574A83000C4A97D /* AVFoundation.framework */; };
+		249D1B9D1574A9C800C4A97D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249D1B9C1574A9C800C4A97D /* AudioToolbox.framework */; };
+		249D1B9F1574A9DD00C4A97D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249D1B9E1574A9DD00C4A97D /* CFNetwork.framework */; };
+		249D1BA61574BC0A00C4A97D /* DFRadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249D1BA51574BC0A00C4A97D /* DFRadioView.m */; };
+		249D1BA91574BE5B00C4A97D /* london.png in Resources */ = {isa = PBXBuildFile; fileRef = 249D1BA81574BE5B00C4A97D /* london.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,21 +32,27 @@
 		24731A7515706AC600A97D01 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24731A7715706AC600A97D01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24731A7915706AC600A97D01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		24731A7D15706AC600A97D01 /* datafruits.fm-Info.plist */ = {isa = PBXFileReference; path = "datafruits.fm-Info.plist"; sourceTree = "<group>"; };
+		24731A7D15706AC600A97D01 /* datafruits.fm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "datafruits.fm-Info.plist"; sourceTree = "<group>"; };
 		24731A7F15706AC600A97D01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24731A8115706AC600A97D01 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		24731A8315706AC600A97D01 /* datafruits.fm-Prefix.pch */ = {isa = PBXFileReference; path = "datafruits.fm-Prefix.pch"; sourceTree = "<group>"; };
-		24731A8415706AC600A97D01 /* DFAppDelegate.h */ = {isa = PBXFileReference; path = DFAppDelegate.h; sourceTree = "<group>"; };
+		24731A8315706AC600A97D01 /* datafruits.fm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "datafruits.fm-Prefix.pch"; sourceTree = "<group>"; };
+		24731A8415706AC600A97D01 /* DFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFAppDelegate.h; sourceTree = "<group>"; };
 		24731A8515706AC600A97D01 /* DFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFAppDelegate.m; sourceTree = "<group>"; };
 		24731A8815706AC600A97D01 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		24731A8A15706AC600A97D01 /* DFFirstViewController.h */ = {isa = PBXFileReference; path = DFFirstViewController.h; sourceTree = "<group>"; };
+		24731A8A15706AC600A97D01 /* DFFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFFirstViewController.h; sourceTree = "<group>"; };
 		24731A8B15706AC600A97D01 /* DFFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFFirstViewController.m; sourceTree = "<group>"; };
 		24731A8D15706AC600A97D01 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		24731A8F15706AC600A97D01 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		24731A9115706AC600A97D01 /* DFSecondViewController.h */ = {isa = PBXFileReference; path = DFSecondViewController.h; sourceTree = "<group>"; };
-		24731A9215706AC600A97D01 /* DFSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSecondViewController.m; sourceTree = "<group>"; };
-		24731A9415706AC600A97D01 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		24731A9615706AC600A97D01 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		24731AB11570A8C800A97D01 /* applicationIconSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applicationIconSmall.png; path = ../applicationIconSmall.png; sourceTree = "<group>"; };
+		24731AB31570A8CE00A97D01 /* applicationIconLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applicationIconLarge.png; path = ../applicationIconLarge.png; sourceTree = "<group>"; };
+		24731AB51572BA8E00A97D01 /* DFPlayPauseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlayPauseView.h; sourceTree = "<group>"; };
+		24731AB61572BA8F00A97D01 /* DFPlayPauseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPlayPauseView.m; sourceTree = "<group>"; };
+		249D1B9A1574A83000C4A97D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		249D1B9C1574A9C800C4A97D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		249D1B9E1574A9DD00C4A97D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		249D1BA41574BC0A00C4A97D /* DFRadioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRadioView.h; sourceTree = "<group>"; };
+		249D1BA51574BC0A00C4A97D /* DFRadioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRadioView.m; sourceTree = "<group>"; };
+		249D1BA81574BE5B00C4A97D /* london.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = london.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249D1B9F1574A9DD00C4A97D /* CFNetwork.framework in Frameworks */,
+				249D1B9D1574A9C800C4A97D /* AudioToolbox.framework in Frameworks */,
+				249D1B9B1574A83000C4A97D /* AVFoundation.framework in Frameworks */,
 				24731A7615706AC600A97D01 /* UIKit.framework in Frameworks */,
 				24731A7815706AC600A97D01 /* Foundation.framework in Frameworks */,
 				24731A7A15706AC600A97D01 /* CoreGraphics.framework in Frameworks */,
@@ -61,6 +75,9 @@
 		24731A6615706AC600A97D01 = {
 			isa = PBXGroup;
 			children = (
+				249D1B9E1574A9DD00C4A97D /* CFNetwork.framework */,
+				249D1B9C1574A9C800C4A97D /* AudioToolbox.framework */,
+				249D1B9A1574A83000C4A97D /* AVFoundation.framework */,
 				24731A7B15706AC600A97D01 /* datafruits.fm */,
 				24731A7415706AC600A97D01 /* Frameworks */,
 				24731A7215706AC600A97D01 /* Products */,
@@ -91,14 +108,12 @@
 				24731A8415706AC600A97D01 /* DFAppDelegate.h */,
 				24731A8515706AC600A97D01 /* DFAppDelegate.m */,
 				24731A8715706AC600A97D01 /* MainStoryboard.storyboard */,
+				24731AB51572BA8E00A97D01 /* DFPlayPauseView.h */,
+				24731AB61572BA8F00A97D01 /* DFPlayPauseView.m */,
+				249D1BA41574BC0A00C4A97D /* DFRadioView.h */,
+				249D1BA51574BC0A00C4A97D /* DFRadioView.m */,
 				24731A8A15706AC600A97D01 /* DFFirstViewController.h */,
 				24731A8B15706AC600A97D01 /* DFFirstViewController.m */,
-				24731A8D15706AC600A97D01 /* first.png */,
-				24731A8F15706AC600A97D01 /* first@2x.png */,
-				24731A9115706AC600A97D01 /* DFSecondViewController.h */,
-				24731A9215706AC600A97D01 /* DFSecondViewController.m */,
-				24731A9415706AC600A97D01 /* second.png */,
-				24731A9615706AC600A97D01 /* second@2x.png */,
 				24731A7C15706AC600A97D01 /* Supporting Files */,
 			);
 			path = datafruits.fm;
@@ -107,6 +122,11 @@
 		24731A7C15706AC600A97D01 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				249D1BA81574BE5B00C4A97D /* london.png */,
+				24731A8D15706AC600A97D01 /* first.png */,
+				24731A8F15706AC600A97D01 /* first@2x.png */,
+				24731AB31570A8CE00A97D01 /* applicationIconLarge.png */,
+				24731AB11570A8C800A97D01 /* applicationIconSmall.png */,
 				24731A7D15706AC600A97D01 /* datafruits.fm-Info.plist */,
 				24731A7E15706AC600A97D01 /* InfoPlist.strings */,
 				24731A8115706AC600A97D01 /* main.m */,
@@ -170,8 +190,9 @@
 				24731A8915706AC600A97D01 /* MainStoryboard.storyboard in Resources */,
 				24731A8E15706AC600A97D01 /* first.png in Resources */,
 				24731A9015706AC600A97D01 /* first@2x.png in Resources */,
-				24731A9515706AC600A97D01 /* second.png in Resources */,
-				24731A9715706AC600A97D01 /* second@2x.png in Resources */,
+				24731AB21570A8C800A97D01 /* applicationIconSmall.png in Resources */,
+				24731AB41570A8CE00A97D01 /* applicationIconLarge.png in Resources */,
+				249D1BA91574BE5B00C4A97D /* london.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +206,8 @@
 				24731A8215706AC600A97D01 /* main.m in Sources */,
 				24731A8615706AC600A97D01 /* DFAppDelegate.m in Sources */,
 				24731A8C15706AC600A97D01 /* DFFirstViewController.m in Sources */,
-				24731A9315706AC600A97D01 /* DFSecondViewController.m in Sources */,
+				24731AB71572BA8F00A97D01 /* DFPlayPauseView.m in Sources */,
+				249D1BA61574BC0A00C4A97D /* DFRadioView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +319,7 @@
 				24731A9C15706AC600A97D01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

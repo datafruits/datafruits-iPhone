@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface DFFirstViewController : UIViewController
+@interface DFFirstViewController : UIViewController {
+	NSURL *urlStream;
+}
+
+@property BOOL isPlaying;
+@property AVPlayer *player;
 
 @end
