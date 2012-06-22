@@ -15,7 +15,6 @@
 	NSURL *urlStream;
 }
 
-@property BOOL isPlaying;
-@property AVAudioPlayer *player;
+@property AVPlayer *player;
 
 @end

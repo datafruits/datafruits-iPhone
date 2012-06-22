@@ -16,15 +16,13 @@
 @end
 
 @implementation  DFFirstViewController {
-	CFReadStreamRef stream;
 }
 
 @synthesize player = _player;
-@synthesize isPlaying = _isPlaying;
 @synthesize playPauseView = _playPauseView;
 
 - (bool)isPlayingForPlayPause:(DFPlayPauseView *)sender {
-	return self.isPlaying;
+	return self.player.rate != 0.0;
 }
 
 - (void)setPlayPauseView:(DFPlayPauseView *)playPauseView {
@@ -39,12 +37,10 @@
 }
 
 - (void)changePlaying {
-	if (!self.isPlaying) {
+	if (self.player.rate == 0.0) {
 		[self.player play];
-		self.isPlaying = YES;
 	} else {
 		[self.player pause];
-		self.isPlaying = NO;
 	}
 }
 
@@ -58,13 +54,15 @@
 
 - (void)viewDidLoad
 {
-	urlStream = [NSURL URLWithString:RADIO_LOCATION];   
+	urlStream = [NSURL URLWithString:RADIO_LOCATION];
 	self.player = [AVPlayer playerWithURL:urlStream];
 	
 	[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     [[AVAudioSession sharedInstance] setActive: YES error: nil];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-	
+
+	//[self.player prepareToPlay];
+
 	[super viewDidLoad];
 }
 
