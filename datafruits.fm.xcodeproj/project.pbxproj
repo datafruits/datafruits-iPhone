@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240E24551593E95600B26263 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240E24541593E95600B26263 /* AVFoundation.framework */; };
+		240E24581593FF8E00B26263 /* DFTwitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E24571593FF8E00B26263 /* DFTwitterView.m */; };
 		24731A7615706AC600A97D01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24731A7515706AC600A97D01 /* UIKit.framework */; };
 		24731A7815706AC600A97D01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24731A7715706AC600A97D01 /* Foundation.framework */; };
 		24731A7A15706AC600A97D01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24731A7915706AC600A97D01 /* CoreGraphics.framework */; };
@@ -20,14 +22,20 @@
 		24731AB21570A8C800A97D01 /* applicationIconSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731AB11570A8C800A97D01 /* applicationIconSmall.png */; };
 		24731AB41570A8CE00A97D01 /* applicationIconLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731AB31570A8CE00A97D01 /* applicationIconLarge.png */; };
 		24731AB71572BA8F00A97D01 /* DFPlayPauseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731AB61572BA8F00A97D01 /* DFPlayPauseView.m */; };
-		249D1B9B1574A83000C4A97D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249D1B9A1574A83000C4A97D /* AVFoundation.framework */; };
 		249D1B9D1574A9C800C4A97D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249D1B9C1574A9C800C4A97D /* AudioToolbox.framework */; };
 		249D1B9F1574A9DD00C4A97D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249D1B9E1574A9DD00C4A97D /* CFNetwork.framework */; };
 		249D1BA61574BC0A00C4A97D /* DFRadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249D1BA51574BC0A00C4A97D /* DFRadioView.m */; };
 		249D1BA91574BE5B00C4A97D /* london.png in Resources */ = {isa = PBXBuildFile; fileRef = 249D1BA81574BE5B00C4A97D /* london.png */; };
+		249D1BBE15769D2000C4A97D /* pink_pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 249D1BBA15769D1F00C4A97D /* pink_pineapple.png */; };
+		249D1BBF15769D2000C4A97D /* yellow_pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 249D1BBB15769D1F00C4A97D /* yellow_pineapple.png */; };
+		249D1BC015769D2000C4A97D /* green_pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 249D1BBC15769D1F00C4A97D /* green_pineapple.png */; };
+		249D1BC115769D2000C4A97D /* blue_pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 249D1BBD15769D2000C4A97D /* blue_pineapple.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240E24541593E95600B26263 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		240E24561593FF8E00B26263 /* DFTwitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFTwitterView.h; sourceTree = "<group>"; };
+		240E24571593FF8E00B26263 /* DFTwitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFTwitterView.m; sourceTree = "<group>"; };
 		24731A7115706AC600A97D01 /* datafruits.fm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = datafruits.fm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24731A7515706AC600A97D01 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24731A7715706AC600A97D01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,12 +55,15 @@
 		24731AB31570A8CE00A97D01 /* applicationIconLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applicationIconLarge.png; path = ../applicationIconLarge.png; sourceTree = "<group>"; };
 		24731AB51572BA8E00A97D01 /* DFPlayPauseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlayPauseView.h; sourceTree = "<group>"; };
 		24731AB61572BA8F00A97D01 /* DFPlayPauseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPlayPauseView.m; sourceTree = "<group>"; };
-		249D1B9A1574A83000C4A97D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		249D1B9C1574A9C800C4A97D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		249D1B9E1574A9DD00C4A97D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		249D1BA41574BC0A00C4A97D /* DFRadioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRadioView.h; sourceTree = "<group>"; };
 		249D1BA51574BC0A00C4A97D /* DFRadioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRadioView.m; sourceTree = "<group>"; };
 		249D1BA81574BE5B00C4A97D /* london.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = london.png; sourceTree = "<group>"; };
+		249D1BBA15769D1F00C4A97D /* pink_pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_pineapple.png; sourceTree = "<group>"; };
+		249D1BBB15769D1F00C4A97D /* yellow_pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_pineapple.png; sourceTree = "<group>"; };
+		249D1BBC15769D1F00C4A97D /* green_pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_pineapple.png; sourceTree = "<group>"; };
+		249D1BBD15769D2000C4A97D /* blue_pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_pineapple.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240E24551593E95600B26263 /* AVFoundation.framework in Frameworks */,
 				249D1B9F1574A9DD00C4A97D /* CFNetwork.framework in Frameworks */,
 				249D1B9D1574A9C800C4A97D /* AudioToolbox.framework in Frameworks */,
-				249D1B9B1574A83000C4A97D /* AVFoundation.framework in Frameworks */,
 				24731A7615706AC600A97D01 /* UIKit.framework in Frameworks */,
 				24731A7815706AC600A97D01 /* Foundation.framework in Frameworks */,
 				24731A7A15706AC600A97D01 /* CoreGraphics.framework in Frameworks */,
@@ -75,9 +86,9 @@
 		24731A6615706AC600A97D01 = {
 			isa = PBXGroup;
 			children = (
+				240E24541593E95600B26263 /* AVFoundation.framework */,
 				249D1B9E1574A9DD00C4A97D /* CFNetwork.framework */,
 				249D1B9C1574A9C800C4A97D /* AudioToolbox.framework */,
-				249D1B9A1574A83000C4A97D /* AVFoundation.framework */,
 				24731A7B15706AC600A97D01 /* datafruits.fm */,
 				24731A7415706AC600A97D01 /* Frameworks */,
 				24731A7215706AC600A97D01 /* Products */,
@@ -112,6 +123,8 @@
 				24731AB61572BA8F00A97D01 /* DFPlayPauseView.m */,
 				249D1BA41574BC0A00C4A97D /* DFRadioView.h */,
 				249D1BA51574BC0A00C4A97D /* DFRadioView.m */,
+				240E24561593FF8E00B26263 /* DFTwitterView.h */,
+				240E24571593FF8E00B26263 /* DFTwitterView.m */,
 				24731A8A15706AC600A97D01 /* DFFirstViewController.h */,
 				24731A8B15706AC600A97D01 /* DFFirstViewController.m */,
 				24731A7C15706AC600A97D01 /* Supporting Files */,
@@ -122,6 +135,10 @@
 		24731A7C15706AC600A97D01 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				249D1BBA15769D1F00C4A97D /* pink_pineapple.png */,
+				249D1BBB15769D1F00C4A97D /* yellow_pineapple.png */,
+				249D1BBC15769D1F00C4A97D /* green_pineapple.png */,
+				249D1BBD15769D2000C4A97D /* blue_pineapple.png */,
 				249D1BA81574BE5B00C4A97D /* london.png */,
 				24731A8D15706AC600A97D01 /* first.png */,
 				24731A8F15706AC600A97D01 /* first@2x.png */,
@@ -170,6 +187,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 24731A6615706AC600A97D01;
 			productRefGroup = 24731A7215706AC600A97D01 /* Products */;
@@ -193,6 +211,10 @@
 				24731AB21570A8C800A97D01 /* applicationIconSmall.png in Resources */,
 				24731AB41570A8CE00A97D01 /* applicationIconLarge.png in Resources */,
 				249D1BA91574BE5B00C4A97D /* london.png in Resources */,
+				249D1BBE15769D2000C4A97D /* pink_pineapple.png in Resources */,
+				249D1BBF15769D2000C4A97D /* yellow_pineapple.png in Resources */,
+				249D1BC015769D2000C4A97D /* green_pineapple.png in Resources */,
+				249D1BC115769D2000C4A97D /* blue_pineapple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +230,7 @@
 				24731A8C15706AC600A97D01 /* DFFirstViewController.m in Sources */,
 				24731AB71572BA8F00A97D01 /* DFPlayPauseView.m in Sources */,
 				249D1BA61574BC0A00C4A97D /* DFRadioView.m in Sources */,
+				240E24581593FF8E00B26263 /* DFTwitterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,10 +304,14 @@
 		24731A9B15706AC600A97D01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "datafruits.fm/datafruits.fm-Prefix.pch";
+				HEADER_SEARCH_PATHS = libvorbis/include/;
 				INFOPLIST_FILE = "datafruits.fm/datafruits.fm-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "libvorbis/include/ libogg/include/";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -292,10 +319,14 @@
 		24731A9C15706AC600A97D01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "datafruits.fm/datafruits.fm-Prefix.pch";
+				HEADER_SEARCH_PATHS = libvorbis/include/;
 				INFOPLIST_FILE = "datafruits.fm/datafruits.fm-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "libvorbis/include/ libogg/include/";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

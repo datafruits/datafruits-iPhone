@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+
 #import <AVFoundation/AVFoundation.h>
 
 @interface DFFirstViewController : UIViewController {
@@ -15,6 +16,6 @@
 }
 
 @property BOOL isPlaying;
-@property AVPlayer *player;
+@property AVAudioPlayer *player;
 
 @end

@@ -9,7 +9,7 @@
 #import "DFFirstViewController.h"
 #import "DFPlayPauseView.h"
 
-#define RADIO_LOCATION @"http://radio.sub.fm:8529"
+#define RADIO_LOCATION @"http://4gods.nl:8000"
 
 @interface DFFirstViewController () <DFPlayPauseDataSource>
 @property (nonatomic, weak) IBOutlet DFPlayPauseView *playPauseView;
@@ -19,8 +19,8 @@
 	CFReadStreamRef stream;
 }
 
-@synthesize isPlaying = _isPlaying;
 @synthesize player = _player;
+@synthesize isPlaying = _isPlaying;
 @synthesize playPauseView = _playPauseView;
 
 - (bool)isPlayingForPlayPause:(DFPlayPauseView *)sender {
@@ -40,7 +40,7 @@
 
 - (void)changePlaying {
 	if (!self.isPlaying) {
-	 	[self.player play];
+		[self.player play];
 		self.isPlaying = YES;
 	} else {
 		[self.player pause];
@@ -58,11 +58,14 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-
 	urlStream = [NSURL URLWithString:RADIO_LOCATION];   
 	self.player = [AVPlayer playerWithURL:urlStream];
-
+	
+	[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [[AVAudioSession sharedInstance] setActive: YES error: nil];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+	
+	[super viewDidLoad];
 }
 
 - (void)viewDidUnload
