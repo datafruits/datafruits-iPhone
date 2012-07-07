@@ -23,13 +23,26 @@
 
 - (void)drawPlayIcon:(CGContextRef)context withMidPoint:(CGPoint)midPoint{
 	UIGraphicsPushContext(context);
+
+	CGFloat w = 14;
+	CGFloat h = 18;
+
+	[[UIColor whiteColor] setStroke];
+	CGContextMoveToPoint(context, midPoint.x - w+2, midPoint.y - h+4);
+	CGContextAddLineToPoint(context, midPoint.x + w+2, midPoint.y+4);
+	CGContextStrokePath(context);
 	
-	CGContextMoveToPoint(context, midPoint.x - 14, midPoint.y - 18);
-	CGContextAddLineToPoint(context, midPoint.x + 10, midPoint.y);
+	CGContextMoveToPoint(context, midPoint.x + w+2, midPoint.y+4);
+	CGContextAddLineToPoint(context, midPoint.x - w+2, midPoint.y + h+4);
 	CGContextStrokePath(context);
 
-	CGContextMoveToPoint(context, midPoint.x + 10, midPoint.y);
-	CGContextAddLineToPoint(context, midPoint.x - 14, midPoint.y + 18);
+	[[UIColor greenColor] setStroke];
+	CGContextMoveToPoint(context, midPoint.x - w, midPoint.y - h);
+	CGContextAddLineToPoint(context, midPoint.x + w, midPoint.y);
+	CGContextStrokePath(context);
+
+	CGContextMoveToPoint(context, midPoint.x + w, midPoint.y);
+	CGContextAddLineToPoint(context, midPoint.x - w, midPoint.y + h);
 	CGContextStrokePath(context);
 	
 	UIGraphicsPopContext();
@@ -83,10 +96,8 @@
 
 	CGContextSetLineWidth(context, 10.0);
 	if (![self.dataSource isPlayingForPlayPause:self]) {
-		[[UIColor greenColor] setStroke];
 		[self drawPlayIcon:context withMidPoint:midPoint];
 	} else {
-		[[UIColor redColor] setStroke];
 		[self drawPauseIcon:context withMidPoint:midPoint];
 	}
 

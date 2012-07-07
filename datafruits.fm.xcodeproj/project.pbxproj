@@ -16,9 +16,7 @@
 		24731A8215706AC600A97D01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731A8115706AC600A97D01 /* main.m */; };
 		24731A8615706AC600A97D01 /* DFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731A8515706AC600A97D01 /* DFAppDelegate.m */; };
 		24731A8915706AC600A97D01 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24731A8715706AC600A97D01 /* MainStoryboard.storyboard */; };
-		24731A8C15706AC600A97D01 /* DFFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731A8B15706AC600A97D01 /* DFFirstViewController.m */; };
-		24731A8E15706AC600A97D01 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731A8D15706AC600A97D01 /* first.png */; };
-		24731A9015706AC600A97D01 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731A8F15706AC600A97D01 /* first@2x.png */; };
+		24731A8C15706AC600A97D01 /* DFRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731A8B15706AC600A97D01 /* DFRadioViewController.m */; };
 		24731AB21570A8C800A97D01 /* applicationIconSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731AB11570A8C800A97D01 /* applicationIconSmall.png */; };
 		24731AB41570A8CE00A97D01 /* applicationIconLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731AB31570A8CE00A97D01 /* applicationIconLarge.png */; };
 		24731AB71572BA8F00A97D01 /* DFPlayPauseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731AB61572BA8F00A97D01 /* DFPlayPauseView.m */; };
@@ -30,6 +28,7 @@
 		249D1BBF15769D2000C4A97D /* yellow_pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 249D1BBB15769D1F00C4A97D /* yellow_pineapple.png */; };
 		249D1BC015769D2000C4A97D /* green_pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 249D1BBC15769D1F00C4A97D /* green_pineapple.png */; };
 		249D1BC115769D2000C4A97D /* blue_pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 249D1BBD15769D2000C4A97D /* blue_pineapple.png */; };
+		24E8157415A4D4FC005C6E02 /* DFTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8157315A4D4FC005C6E02 /* DFTwitterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +46,8 @@
 		24731A8415706AC600A97D01 /* DFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFAppDelegate.h; sourceTree = "<group>"; };
 		24731A8515706AC600A97D01 /* DFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFAppDelegate.m; sourceTree = "<group>"; };
 		24731A8815706AC600A97D01 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		24731A8A15706AC600A97D01 /* DFFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFFirstViewController.h; sourceTree = "<group>"; };
-		24731A8B15706AC600A97D01 /* DFFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFFirstViewController.m; sourceTree = "<group>"; };
-		24731A8D15706AC600A97D01 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		24731A8F15706AC600A97D01 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		24731A8A15706AC600A97D01 /* DFRadioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFRadioViewController.h; sourceTree = "<group>"; };
+		24731A8B15706AC600A97D01 /* DFRadioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFRadioViewController.m; sourceTree = "<group>"; };
 		24731AB11570A8C800A97D01 /* applicationIconSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applicationIconSmall.png; path = ../applicationIconSmall.png; sourceTree = "<group>"; };
 		24731AB31570A8CE00A97D01 /* applicationIconLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applicationIconLarge.png; path = ../applicationIconLarge.png; sourceTree = "<group>"; };
 		24731AB51572BA8E00A97D01 /* DFPlayPauseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlayPauseView.h; sourceTree = "<group>"; };
@@ -64,6 +61,8 @@
 		249D1BBB15769D1F00C4A97D /* yellow_pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_pineapple.png; sourceTree = "<group>"; };
 		249D1BBC15769D1F00C4A97D /* green_pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_pineapple.png; sourceTree = "<group>"; };
 		249D1BBD15769D2000C4A97D /* blue_pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_pineapple.png; sourceTree = "<group>"; };
+		24E8157215A4D4FC005C6E02 /* DFTwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFTwitterViewController.h; sourceTree = "<group>"; };
+		24E8157315A4D4FC005C6E02 /* DFTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFTwitterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +124,10 @@
 				249D1BA51574BC0A00C4A97D /* DFRadioView.m */,
 				240E24561593FF8E00B26263 /* DFTwitterView.h */,
 				240E24571593FF8E00B26263 /* DFTwitterView.m */,
-				24731A8A15706AC600A97D01 /* DFFirstViewController.h */,
-				24731A8B15706AC600A97D01 /* DFFirstViewController.m */,
+				24731A8A15706AC600A97D01 /* DFRadioViewController.h */,
+				24731A8B15706AC600A97D01 /* DFRadioViewController.m */,
+				24E8157215A4D4FC005C6E02 /* DFTwitterViewController.h */,
+				24E8157315A4D4FC005C6E02 /* DFTwitterViewController.m */,
 				24731A7C15706AC600A97D01 /* Supporting Files */,
 			);
 			path = datafruits.fm;
@@ -140,8 +141,6 @@
 				249D1BBC15769D1F00C4A97D /* green_pineapple.png */,
 				249D1BBD15769D2000C4A97D /* blue_pineapple.png */,
 				249D1BA81574BE5B00C4A97D /* london.png */,
-				24731A8D15706AC600A97D01 /* first.png */,
-				24731A8F15706AC600A97D01 /* first@2x.png */,
 				24731AB31570A8CE00A97D01 /* applicationIconLarge.png */,
 				24731AB11570A8C800A97D01 /* applicationIconSmall.png */,
 				24731A7D15706AC600A97D01 /* datafruits.fm-Info.plist */,
@@ -206,8 +205,6 @@
 			files = (
 				24731A8015706AC600A97D01 /* InfoPlist.strings in Resources */,
 				24731A8915706AC600A97D01 /* MainStoryboard.storyboard in Resources */,
-				24731A8E15706AC600A97D01 /* first.png in Resources */,
-				24731A9015706AC600A97D01 /* first@2x.png in Resources */,
 				24731AB21570A8C800A97D01 /* applicationIconSmall.png in Resources */,
 				24731AB41570A8CE00A97D01 /* applicationIconLarge.png in Resources */,
 				249D1BA91574BE5B00C4A97D /* london.png in Resources */,
@@ -227,10 +224,11 @@
 			files = (
 				24731A8215706AC600A97D01 /* main.m in Sources */,
 				24731A8615706AC600A97D01 /* DFAppDelegate.m in Sources */,
-				24731A8C15706AC600A97D01 /* DFFirstViewController.m in Sources */,
+				24731A8C15706AC600A97D01 /* DFRadioViewController.m in Sources */,
 				24731AB71572BA8F00A97D01 /* DFPlayPauseView.m in Sources */,
 				249D1BA61574BC0A00C4A97D /* DFRadioView.m in Sources */,
 				240E24581593FF8E00B26263 /* DFTwitterView.m in Sources */,
+				24E8157415A4D4FC005C6E02 /* DFTwitterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +274,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -294,7 +292,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

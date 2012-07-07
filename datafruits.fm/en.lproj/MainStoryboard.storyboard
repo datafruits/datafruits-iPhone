@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5cC-U7-gdQ">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - First-->
-        <scene sceneID="11">
+        <!--Twitter View Controller - Tweets-->
+        <scene sceneID="5nb-E2-IKq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
-                <viewController title="First" id="2" customClass="DFFirstViewController" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gV-ac-68T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="orX-rJ-iO5" customClass="DFTwitterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ndE-b3-WqH" customClass="DFTwitterView">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tweets" id="ZgD-7u-XO9"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="235" y="188"/>
+        </scene>
+        <!--Radio View Controller - Radio-->
+        <scene sceneID="E2x-WX-3t0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pU-6A-fNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="5cC-U7-gdQ" customClass="DFRadioViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16" customClass="DFRadioView">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="AiO-FF-JUx" userLabel="twitter">
-                                <rect key="frame" x="277" y="0.0" width="46" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="datafruits.fm" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="20">
-                                <rect key="frame" x="20" y="20" width="280" height="84"/>
+                                <rect key="frame" x="20" y="17" width="280" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="85"/>
@@ -28,15 +39,6 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="2"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="playing the freshest 2step,moe-garage,skweee,wonk,acid-bit." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xMn-ed-PdM">
-                                <rect key="frame" x="20" y="112" width="280" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="2" height="1"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="green_pineapple.png" id="bE5-14-Jfk">
                                 <rect key="frame" x="0.0" y="229" width="60" height="64"/>
@@ -163,19 +165,122 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="3CL-3n-nwx" customClass="DFPlayPauseView">
-                                <rect key="frame" x="96" y="312" width="128" height="128"/>
+                                <rect key="frame" x="96" y="263" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5cC-U7-gdQ" id="upV-Ho-jyc"/>
+                                </connections>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="green_pineapple.png" id="4lL-R2-QQe">
+                                <rect key="frame" x="0.0" y="151" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="yellow_pineapple.png" id="Jab-C1-eeu">
+                                <rect key="frame" x="35" y="162" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="blue_pineapple.png" id="XjP-BH-aQR">
+                                <rect key="frame" x="79" y="153" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="pink_pineapple.png" id="32e-n4-Py5">
+                                <rect key="frame" x="113" y="151" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="green_pineapple.png" id="R5z-2x-bVg">
+                                <rect key="frame" x="147" y="151" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="yellow_pineapple.png" id="9mZ-Pn-6Mn">
+                                <rect key="frame" x="186" y="151" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="green_pineapple.png" id="WCS-WQ-6NI">
+                                <rect key="frame" x="228" y="153" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="pink_pineapple.png" id="IRg-FP-B1z">
+                                <rect key="frame" x="254" y="149" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="yellow_pineapple.png" id="LPl-tr-qre">
+                                <rect key="frame" x="9" y="192" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="green_pineapple.png" id="j3z-c9-V9g">
+                                <rect key="frame" x="39" y="192" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="blue_pineapple.png" id="HXY-nq-ycO">
+                                <rect key="frame" x="79" y="193" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="pink_pineapple.png" id="lCI-zi-84V">
+                                <rect key="frame" x="113" y="192" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="pink_pineapple.png" id="BKM-2m-Hno">
+                                <rect key="frame" x="136" y="188" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="yellow_pineapple.png" id="ilt-k1-CA4">
+                                <rect key="frame" x="190" y="188" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="blue_pineapple.png" id="dlO-R8-52c">
+                                <rect key="frame" x="224" y="192" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="pink_pineapple.png" id="Afe-dO-ZfK">
+                                <rect key="frame" x="260" y="192" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="yellow_pineapple.png" id="TqY-3J-d9A">
+                                <rect key="frame" x="26" y="80" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="green_pineapple.png" id="qvu-Cp-1lH">
+                                <rect key="frame" x="90" y="92" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="pink_pineapple.png" id="UFc-bs-hFa">
+                                <rect key="frame" x="240" y="88" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="blue_pineapple.png" id="wWH-RG-M5p">
+                                <rect key="frame" x="162" y="94" width="60" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Radio" image="pink_pineapple.png" id="Lud-PS-kX0"/>
                     <connections>
-                        <outlet property="playPauseView" destination="3CL-3n-nwx" id="dET-Vi-tn0"/>
+                        <outlet property="playPauseView" destination="3CL-3n-nwx" id="Uox-i8-zs8"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="235" y="-376"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tdx-HC-8lV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ey3-Tt-aDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="OxJ-du-fsO" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="65m-JT-fJc">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5cC-U7-gdQ" kind="relationship" relationship="viewControllers" id="PIf-nB-gdn"/>
+                        <segue destination="orX-rJ-iO5" kind="relationship" relationship="viewControllers" id="eIH-P2-eta"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-297" y="-92"/>
         </scene>
     </scenes>
     <resources>
@@ -185,12 +290,6 @@
         <image name="yellow_pineapple.png" width="180" height="193"/>
     </resources>
     <classes>
-        <class className="DFFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DFFirstViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="playPauseView" candidateClass="DFPlayPauseView"/>
-            </relationships>
-        </class>
         <class className="DFPlayPauseView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DFPlayPauseView.h"/>
             <relationships>
@@ -199,6 +298,18 @@
         </class>
         <class className="DFRadioView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DFRadioView.h"/>
+        </class>
+        <class className="DFRadioViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DFRadioViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="playPauseView" candidateClass="DFPlayPauseView"/>
+            </relationships>
+        </class>
+        <class className="DFTwitterView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DFTwitterView.h"/>
+        </class>
+        <class className="DFTwitterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DFTwitterViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
