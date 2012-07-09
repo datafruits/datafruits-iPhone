@@ -274,7 +274,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -292,7 +292,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -307,8 +307,9 @@
 				GCC_PREFIX_HEADER = "datafruits.fm/datafruits.fm-Prefix.pch";
 				HEADER_SEARCH_PATHS = libvorbis/include/;
 				INFOPLIST_FILE = "datafruits.fm/datafruits.fm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "libvorbis/include/ libogg/include/";
 				WRAPPER_EXTENSION = app;
 			};
@@ -322,8 +323,9 @@
 				GCC_PREFIX_HEADER = "datafruits.fm/datafruits.fm-Prefix.pch";
 				HEADER_SEARCH_PATHS = libvorbis/include/;
 				INFOPLIST_FILE = "datafruits.fm/datafruits.fm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "libvorbis/include/ libogg/include/";
 				WRAPPER_EXTENSION = app;
 			};
