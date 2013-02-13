@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self fetchTweets];
+	//[self fetchTweets];
 }
 
 - (void)viewDidUnload
@@ -52,7 +52,7 @@
                                                  options:kNilOptions
                                                    error:&error];
 		
-		NSLog(@"%s", [tweets objectAtIndex:0]);
+		//NSLog(@"%s", [tweets objectAtIndex:0]);
         dispatch_async(dispatch_get_main_queue(), ^{
             //[self.tableView reloadData];
         });

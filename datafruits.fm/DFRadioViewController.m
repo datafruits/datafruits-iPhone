@@ -33,6 +33,7 @@
 
 - (void)handlePlayPauseTap:(UITapGestureRecognizer *)gesture {
 	[self changePlaying];
+	NSLog(@"%f, %@", self.player.rate, self.player.status);
 	[self.playPauseView setNeedsDisplay];
 }
 
