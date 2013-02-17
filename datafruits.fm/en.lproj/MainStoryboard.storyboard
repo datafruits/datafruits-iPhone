@@ -332,40 +332,10 @@
         <image name="blue_pineapple.png" width="180" height="193"/>
         <image name="green_pineapple.png" width="180" height="193"/>
         <image name="pink_pineapple.png" width="180" height="193"/>
-        <image name="radio.png" width="44" height="37"/>
-        <image name="twitter.png" width="52" height="46"/>
+        <image name="radio.png" width="38" height="33"/>
+        <image name="twitter.png" width="45" height="40"/>
         <image name="yellow_pineapple.png" width="180" height="193"/>
     </resources>
-    <classes>
-        <class className="DFPlayPauseView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DFPlayPauseView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dataSource"/>
-            </relationships>
-        </class>
-        <class className="DFRadioView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DFRadioView.h"/>
-        </class>
-        <class className="DFRadioViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DFRadioViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="playPauseView" candidateClass="DFPlayPauseView"/>
-            </relationships>
-        </class>
-        <class className="DFTwitterView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DFTwitterView.h"/>
-        </class>
-        <class className="DFTwitterViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DFTwitterViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="tweetView1" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="tweetView2" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="tweetView3" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="tweetView4" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
