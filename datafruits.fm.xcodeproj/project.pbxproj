@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		240E24551593E95600B26263 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240E24541593E95600B26263 /* AVFoundation.framework */; };
 		240E24581593FF8E00B26263 /* DFTwitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E24571593FF8E00B26263 /* DFTwitterView.m */; };
+		241ABB2A16D0867C00D91CBF /* twitterbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 241ABB2916D0867C00D91CBF /* twitterbg.png */; };
+		241ABB3E16D095FA00D91CBF /* radio.png in Resources */ = {isa = PBXBuildFile; fileRef = 241ABB3D16D095FA00D91CBF /* radio.png */; };
+		241ABB4016D0963A00D91CBF /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 241ABB3F16D0963A00D91CBF /* twitter.png */; };
 		24731A7615706AC600A97D01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24731A7515706AC600A97D01 /* UIKit.framework */; };
 		24731A7815706AC600A97D01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24731A7715706AC600A97D01 /* Foundation.framework */; };
 		24731A7A15706AC600A97D01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24731A7915706AC600A97D01 /* CoreGraphics.framework */; };
@@ -38,6 +41,9 @@
 		240E24541593E95600B26263 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		240E24561593FF8E00B26263 /* DFTwitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFTwitterView.h; sourceTree = "<group>"; };
 		240E24571593FF8E00B26263 /* DFTwitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFTwitterView.m; sourceTree = "<group>"; };
+		241ABB2916D0867C00D91CBF /* twitterbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterbg.png; sourceTree = "<group>"; };
+		241ABB3D16D095FA00D91CBF /* radio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio.png; sourceTree = "<group>"; };
+		241ABB3F16D0963A00D91CBF /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		24731A7115706AC600A97D01 /* datafruits.fm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = datafruits.fm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24731A7515706AC600A97D01 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24731A7715706AC600A97D01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -152,6 +158,9 @@
 				249D1BBC15769D1F00C4A97D /* green_pineapple.png */,
 				249D1BBD15769D2000C4A97D /* blue_pineapple.png */,
 				249D1BA81574BE5B00C4A97D /* london.png */,
+				241ABB3F16D0963A00D91CBF /* twitter.png */,
+				241ABB3D16D095FA00D91CBF /* radio.png */,
+				241ABB2916D0867C00D91CBF /* twitterbg.png */,
 				24731AB31570A8CE00A97D01 /* applicationIconLarge.png */,
 				24731AB11570A8C800A97D01 /* applicationIconSmall.png */,
 				24731A7D15706AC600A97D01 /* datafruits.fm-Info.plist */,
@@ -224,6 +233,9 @@
 				249D1BC015769D2000C4A97D /* green_pineapple.png in Resources */,
 				249D1BC115769D2000C4A97D /* blue_pineapple.png in Resources */,
 				24FAF8CC16CB536D00D8C7F5 /* Default-568h@2x.png in Resources */,
+				241ABB2A16D0867C00D91CBF /* twitterbg.png in Resources */,
+				241ABB3E16D095FA00D91CBF /* radio.png in Resources */,
+				241ABB4016D0963A00D91CBF /* twitter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

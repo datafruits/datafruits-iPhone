@@ -17,6 +17,7 @@
 @implementation DFTwitterViewController
 
 @synthesize accountStore = _accountStore;
+@synthesize lastTwitterRequest = _lastTwitterRequest;
 @synthesize activityIndicator = _activityIndicator;
 @synthesize tweetView1 = _tweetView1;
 @synthesize tweetView2 = _tweetView2;
@@ -32,16 +33,24 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+
+	NSDate *tenMinutesAgo = [[NSDate date] dateByAddingTimeInterval:-600];
+	if (self.lastTwitterRequest == nil
+		|| self.lastTwitterRequest > tenMinutesAgo
+	) {
+		[self.activityIndicator startAnimating];
+		[self fetchTweets];
+	}
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-	/*NSURL *url = [NSURL URLWithString:@"https://mobile.twitter.com/datafruits/tweets"];
-	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-	[self.viewWeb loadRequest:requestObj];*/
-
 	self.accountStore = [[ACAccountStore alloc] init];
-	[self fetchTweets];
 }
 
 - (void)viewDidUnload
@@ -76,7 +85,6 @@
 				 //  Step 2:  Create a request
 				 NSArray *twitterAccounts =
 				 [self.accountStore accountsWithAccountType:twitterAccountType];
-				 NSLog(@"accounts: %d", [twitterAccounts count]);
 
 				 NSURL *url =
 				 [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/user_timeline.json"];
@@ -107,6 +115,8 @@
 							  options:NSJSONReadingAllowFragments error:&jsonError];
 
 							 if (timelineData) {
+								 self.lastTwitterRequest = [NSDate date];
+
 								 NSInteger count = [timelineData count];
 								 for (int i = 0; i < count; i++) {
 									 NSDictionary *tweet = [timelineData objectAtIndex:i];
@@ -115,15 +125,6 @@
 									 UITextView *tweetView = [self valueForKey:
 															  [@"tweetView" stringByAppendingString:
 															   [NSString stringWithFormat:@"%d", i+1]]];
-									 /*if (i == 0) {
-										 tweetView = self.tweetView1;
-									 } else if (i == 1) {
-										 tweetView = self.tweetView2;
-									 } else if (i == 2) {
-										 tweetView = self.tweetView3;
-									 } else if (i == 3) {
-										 tweetView = self.tweetView4;
-									 }*/
 
 									 dispatch_async(dispatch_get_main_queue(), ^{
 										 tweetView.text = tweetText;

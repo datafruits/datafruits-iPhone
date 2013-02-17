@@ -15,8 +15,7 @@
 @property (nonatomic, weak) IBOutlet DFPlayPauseView *playPauseView;
 @end
 
-@implementation  DFRadioViewController {
-}
+@implementation  DFRadioViewController
 
 @synthesize player = _player;
 @synthesize playPauseView = _playPauseView;

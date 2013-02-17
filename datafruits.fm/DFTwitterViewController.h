@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface DFTwitterViewController : UIViewController {
-	NSArray *tweets;
 }
 
 - (void)fetchTweets;
 - (BOOL)userHasAccessToTwitter;
 
 @property (nonatomic) ACAccountStore *accountStore;
+@property (nonatomic) NSDate *lastTwitterRequest;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UITextView *tweetView1;
 @property (weak, nonatomic) IBOutlet UITextView *tweetView2;

@@ -19,13 +19,13 @@
     return self;
 }
 
-/*
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+ - (void)drawRect:(CGRect)rect {
+	 UIImage *image = [UIImage imageNamed: @"twitterbg.png"];
+	 [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
-*/
+
 
 @end
