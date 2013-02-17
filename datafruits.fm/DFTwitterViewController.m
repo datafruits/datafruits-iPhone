@@ -39,7 +39,7 @@
 
 	NSDate *tenMinutesAgo = [[NSDate date] dateByAddingTimeInterval:-600];
 	if (self.lastTwitterRequest == nil
-		|| self.lastTwitterRequest > tenMinutesAgo
+		|| self.lastTwitterRequest < tenMinutesAgo
 	) {
 		[self.activityIndicator startAnimating];
 		[self fetchTweets];
