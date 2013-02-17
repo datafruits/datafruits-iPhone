@@ -33,7 +33,6 @@
 
 - (void)handlePlayPauseTap:(UITapGestureRecognizer *)gesture {
 	[self changePlaying];
-	NSLog(@"%f, %@", self.player.rate, self.player.status);
 	[self.playPauseView setNeedsDisplay];
 }
 
@@ -61,8 +60,6 @@
 	[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     [[AVAudioSession sharedInstance] setActive: YES error: nil];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-
-	//[self.player prepareToPlay];
 
 	[super viewDidLoad];
 }

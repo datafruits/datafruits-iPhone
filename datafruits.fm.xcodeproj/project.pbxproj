@@ -20,6 +20,8 @@
 		24731AB21570A8C800A97D01 /* applicationIconSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731AB11570A8C800A97D01 /* applicationIconSmall.png */; };
 		24731AB41570A8CE00A97D01 /* applicationIconLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 24731AB31570A8CE00A97D01 /* applicationIconLarge.png */; };
 		24731AB71572BA8F00A97D01 /* DFPlayPauseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24731AB61572BA8F00A97D01 /* DFPlayPauseView.m */; };
+		24914E4F16CF32060036DCE1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24914E4E16CF32060036DCE1 /* Accounts.framework */; };
+		24914E5116CF320B0036DCE1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24914E5016CF320B0036DCE1 /* Social.framework */; };
 		249D1B9D1574A9C800C4A97D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249D1B9C1574A9C800C4A97D /* AudioToolbox.framework */; };
 		249D1B9F1574A9DD00C4A97D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249D1B9E1574A9DD00C4A97D /* CFNetwork.framework */; };
 		249D1BA61574BC0A00C4A97D /* DFRadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249D1BA51574BC0A00C4A97D /* DFRadioView.m */; };
@@ -53,6 +55,8 @@
 		24731AB31570A8CE00A97D01 /* applicationIconLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applicationIconLarge.png; path = ../applicationIconLarge.png; sourceTree = "<group>"; };
 		24731AB51572BA8E00A97D01 /* DFPlayPauseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlayPauseView.h; sourceTree = "<group>"; };
 		24731AB61572BA8F00A97D01 /* DFPlayPauseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPlayPauseView.m; sourceTree = "<group>"; };
+		24914E4E16CF32060036DCE1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		24914E5016CF320B0036DCE1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		249D1B9C1574A9C800C4A97D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		249D1B9E1574A9DD00C4A97D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		249D1BA41574BC0A00C4A97D /* DFRadioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRadioView.h; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24914E5116CF320B0036DCE1 /* Social.framework in Frameworks */,
+				24914E4F16CF32060036DCE1 /* Accounts.framework in Frameworks */,
 				240E24551593E95600B26263 /* AVFoundation.framework in Frameworks */,
 				249D1B9F1574A9DD00C4A97D /* CFNetwork.framework in Frameworks */,
 				249D1B9D1574A9C800C4A97D /* AudioToolbox.framework in Frameworks */,
@@ -87,6 +93,8 @@
 		24731A6615706AC600A97D01 = {
 			isa = PBXGroup;
 			children = (
+				24914E5016CF320B0036DCE1 /* Social.framework */,
+				24914E4E16CF32060036DCE1 /* Accounts.framework */,
 				24FAF8CB16CB536D00D8C7F5 /* Default-568h@2x.png */,
 				240E24541593E95600B26263 /* AVFoundation.framework */,
 				249D1B9E1574A9DD00C4A97D /* CFNetwork.framework */,

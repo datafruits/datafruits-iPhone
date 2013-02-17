@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
 #import "DFTwitterViewController.h"
 
 @interface DFTwitterViewController ()
@@ -13,6 +15,13 @@
 @end
 
 @implementation DFTwitterViewController
+
+@synthesize accountStore = _accountStore;
+@synthesize activityIndicator = _activityIndicator;
+@synthesize tweetView1 = _tweetView1;
+@synthesize tweetView2 = _tweetView2;
+@synthesize tweetView3 = _tweetView3;
+@synthesize tweetView4 = _tweetView4;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +35,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	//[self fetchTweets];
+
+	/*NSURL *url = [NSURL URLWithString:@"https://mobile.twitter.com/datafruits/tweets"];
+	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+	[self.viewWeb loadRequest:requestObj];*/
+
+	self.accountStore = [[ACAccountStore alloc] init];
+	[self fetchTweets];
 }
 
 - (void)viewDidUnload
@@ -40,23 +55,108 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (BOOL)userHasAccessToTwitter
+{
+	return [SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter];
+}
+
 - (void)fetchTweets
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSData* data = [NSData dataWithContentsOfURL:
-                        [NSURL URLWithString: @"https://api.twitter.com/1/statuses/public_timeline.json"]];
-		
-        NSError* error;
-		
-        tweets = [NSJSONSerialization JSONObjectWithData:data
-                                                 options:kNilOptions
-                                                   error:&error];
-		
-		//NSLog(@"%s", [tweets objectAtIndex:0]);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //[self.tableView reloadData];
-        });
-    });
+	if ([self userHasAccessToTwitter]) {
+		//  Step 1:  Obtain access to the user's Twitter accounts
+		ACAccountType *twitterAccountType = [self.accountStore
+											 accountTypeWithAccountTypeIdentifier:
+											 ACAccountTypeIdentifierTwitter];
+
+		[self.accountStore
+		 requestAccessToAccountsWithType:twitterAccountType
+		 options:nil
+		 completion:^(BOOL granted, NSError *error) {
+			 if (granted) {
+				 //  Step 2:  Create a request
+				 NSArray *twitterAccounts =
+				 [self.accountStore accountsWithAccountType:twitterAccountType];
+				 NSLog(@"accounts: %d", [twitterAccounts count]);
+
+				 NSURL *url =
+				 [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/user_timeline.json"];
+				 NSDictionary *params = @{@"screen_name" : @"datafruits",
+							  @"include_rts" : @"1",
+							  @"trim_user" : @"1",
+							  @"count" : @"4"};
+
+				 SLRequest *request =
+				 [SLRequest requestForServiceType:SLServiceTypeTwitter
+									requestMethod:SLRequestMethodGET
+											  URL:url
+									   parameters:params];
+
+				 //  Attach an account to the request
+				 [request setAccount:[twitterAccounts lastObject]];
+
+				 //  Step 3:  Execute the request
+				 [request performRequestWithHandler:^(NSData *responseData,
+													  NSHTTPURLResponse *urlResponse,
+													  NSError *error) {
+					 if (responseData) {
+						 if (urlResponse.statusCode >= 200 && urlResponse.statusCode < 300) {
+							 NSError *jsonError;
+							 NSArray *timelineData =
+							 [NSJSONSerialization
+							  JSONObjectWithData:responseData
+							  options:NSJSONReadingAllowFragments error:&jsonError];
+
+							 if (timelineData) {
+								 NSInteger count = [timelineData count];
+								 for (int i = 0; i < count; i++) {
+									 NSDictionary *tweet = [timelineData objectAtIndex:i];
+									 NSString *tweetText = [tweet valueForKey:@"text"];
+
+									 UITextView *tweetView = [self valueForKey:
+															  [@"tweetView" stringByAppendingString:
+															   [NSString stringWithFormat:@"%d", i+1]]];
+									 /*if (i == 0) {
+										 tweetView = self.tweetView1;
+									 } else if (i == 1) {
+										 tweetView = self.tweetView2;
+									 } else if (i == 2) {
+										 tweetView = self.tweetView3;
+									 } else if (i == 3) {
+										 tweetView = self.tweetView4;
+									 }*/
+
+									 dispatch_async(dispatch_get_main_queue(), ^{
+										 tweetView.text = tweetText;
+										 [self.activityIndicator stopAnimating];
+									 });
+								 }
+							 }
+							 else {
+								 // Our JSON deserialization went awry
+								 NSLog(@"JSON Error: %@", [jsonError localizedDescription]);
+							 }
+						 }
+						 else {
+							 // The server did not respond successfully... were we rate-limited?
+							 NSLog(@"The response status code is %d", urlResponse.statusCode);
+						 }
+					 }
+				 }];
+			 } else {
+				 // Access was not granted, or an error occurred
+				 NSLog(@"%@", [error localizedDescription]);
+				 dispatch_async(dispatch_get_main_queue(), ^{
+					 [self.activityIndicator stopAnimating];
+					 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Twitter Accounts found"
+																	 message:@"Add a Twitter account in Settings!"
+																	delegate:nil
+														   cancelButtonTitle:@"OK"
+														   otherButtonTitles:nil];
+					 [alert show];
+				 });
+			 }
+		 }];
+	}
 }
 
 @end

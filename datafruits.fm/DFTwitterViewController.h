@@ -13,5 +13,13 @@
 }
 
 - (void)fetchTweets;
+- (BOOL)userHasAccessToTwitter;
+
+@property (nonatomic) ACAccountStore *accountStore;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UITextView *tweetView1;
+@property (weak, nonatomic) IBOutlet UITextView *tweetView2;
+@property (weak, nonatomic) IBOutlet UITextView *tweetView3;
+@property (weak, nonatomic) IBOutlet UITextView *tweetView4;
 
 @end
