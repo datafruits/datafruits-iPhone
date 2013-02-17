@@ -37,10 +37,17 @@
 {
 	[super viewDidAppear:animated];
 
-	NSDate *tenMinutesAgo = [[NSDate date] dateByAddingTimeInterval:-600];
+	NSDate *fiveMinutesAgo = [[NSDate date] dateByAddingTimeInterval:-300];
 	if (self.lastTwitterRequest == nil
-		|| self.lastTwitterRequest < tenMinutesAgo
+		|| [self.lastTwitterRequest compare:fiveMinutesAgo] == NSOrderedAscending
 	) {
+		//NSLog(@"refreshing tweets");
+		//NSLog(@"fiveMinutesAgo: %@", fiveMinutesAgo);
+		//NSLog(@"lastTwitterRequest: %@", self.lastTwitterRequest);
+		self.tweetView1.text = @"";
+		self.tweetView2.text = @"";
+		self.tweetView3.text = @"";
+		self.tweetView4.text = @"";
 		[self.activityIndicator startAnimating];
 		[self fetchTweets];
 	}
