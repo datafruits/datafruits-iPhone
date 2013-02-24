@@ -53,6 +53,8 @@
 
 - (void)viewDidLoad
 {
+	[super viewDidLoad];
+
 	urlStream = [NSURL URLWithString:RADIO_LOCATION];
 	self.player = [AVPlayer playerWithURL:urlStream];
 	
@@ -60,7 +62,11 @@
     [[AVAudioSession sharedInstance] setActive: YES error: nil];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 
-	[super viewDidLoad];
+	/*NSURL *url = [NSURL URLWithString:@"http://datafruits.fm/"];
+	NSString *webData = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://datafruits.fm"] encoding:NSUTF8StringEncoding error:NULL];
+	if (webData != nil) {
+		self.nowPlayingView.text = webData;
+	}*/
 }
 
 - (void)viewDidUnload
