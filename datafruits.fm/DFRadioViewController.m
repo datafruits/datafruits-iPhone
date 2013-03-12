@@ -9,7 +9,7 @@
 #import "DFRadioViewController.h"
 #import "DFPlayPauseView.h"
 
-#define RADIO_LOCATION @"http://www.datafruits.fm:8000/datafruits.mp3"
+#define RADIO_LOCATION @"http://radio.datafruits.fm:8000/datafruits.mp3"
 
 @interface DFRadioViewController () <DFPlayPauseDataSource>
 @property (nonatomic, weak) IBOutlet DFPlayPauseView *playPauseView;
